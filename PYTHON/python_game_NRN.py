@@ -1,6 +1,7 @@
 #! /usr/bin/env python3.6
 import os.path
 import random
+import string
 
 #Open external txt file containing dictionary words
 openFile = open(os.path.join(os.path.dirname(__file__), "8_nounlist.txt"))
@@ -72,7 +73,13 @@ while wrongGuesses > 0:
       break
   print("\nYou have", wrongGuesses, "wrong guesses left.")
   print("\nHere is the word so far:", wordImage)
-  userCharacter = input("\nEnter a letter: ").lower()
+  
+  #Input validation to ensure user enters single letter
+  userCharacter = '-'
+  while userCharacter not in string.ascii_lowercase:
+    userCharacter = input("\nEnter a letter: ").lower()
+    if len(userCharacter) > 1:
+        userCharacter = userCharacter[0]
 
   #If user re-enters previously guessed character  
   if userCharacter in wordImage or userCharacter in previousGuesses:
