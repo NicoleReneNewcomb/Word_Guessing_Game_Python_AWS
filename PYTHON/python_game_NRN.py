@@ -78,8 +78,14 @@ while wrongGuesses > 0:
   userCharacter = '-'
   while userCharacter not in string.ascii_lowercase:
     userCharacter = input("\nEnter a letter: ").lower()
+    
+    #If multiple characters entered, use first one
     if len(userCharacter) > 1:
         userCharacter = userCharacter[0]
+    
+    #If item entered not a letter, inform user
+    if userCharacter not in string.ascii_lowercase:
+        print("\nThat didn't seem to be a letter.")
 
   #If user re-enters previously guessed character  
   if userCharacter in wordImage or userCharacter in previousGuesses:
