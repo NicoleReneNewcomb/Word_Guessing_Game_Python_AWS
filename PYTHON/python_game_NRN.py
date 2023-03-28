@@ -106,9 +106,28 @@ while wrongGuesses > 0:
 
 #If out of guesses, you lose
 if wrongGuesses == 0:
-    print("\nSorry, you lost this time. Please try again.\n\n")
+    print("\nSorry, you lost this time. Please try again.")
+    print(r"""
+__   __                     _                  _   
+\ \ / /                    | |                | |  
+ \ V /   ___   _   _       | |      ___   ___ | |_ 
+  \ /   / _ \ | | | |      | |     / _ \ / __|| __|
+  | |  | (_) || |_| |      | |____| (_) |\__ \| |_ 
+  \_/   \___/  \__,_|      \_____/ \___/ |___/ \__|
+                                                           
+""")
 
 #If wordImage filled in, you win
 elif '_' not in wordImage:
     print("\nCongratulations! You've won!\n")
-    print("Your winning word was:", wordImage, "\n\n")
+    print("Your winning word was:", wordImage, "\n")
+    print(r"""
+ _    _  _                           
+| |  | |(_)                          
+| |  | | _  _ __   _ __    ___  _ __ 
+| |/\| || || '_ \ | '_ \  / _ \| '__|
+\  /\  /| || | | || | | ||  __/| |   
+ \/  \/ |_||_| |_||_| |_| \___||_|   
+
+                                 
+""")
