@@ -1,4 +1,6 @@
 #! /usr/bin/env python3.6
+#Word guessing game created by Nicole-Rene
+
 import os.path
 import random
 import string
