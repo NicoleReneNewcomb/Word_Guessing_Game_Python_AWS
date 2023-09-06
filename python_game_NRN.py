@@ -43,17 +43,13 @@ while userLevel not in range(3,15):
         pass
 
 #Assign number of incorrect guesses allowed before losing
-match userLevel:
-    case 3 | 4 | 5:
+if userLevel in [3, 4]:
         wrongGuesses = 16
-
-    case 5 | 6 | 7:
+elif userLevel in [5, 6, 7]:
         wrongGuesses = 14
-
-    case 8 | 9 | 10:
+elif userLevel in [8, 9, 10]:
         wrongGuesses = 10
-
-    case 11 | 12 | 13 | 14:
+elif userLevel in [11, 12, 13, 14]:
         wrongGuesses = 8
 
 #Output user's entry and number of incorrect guesses allowed
